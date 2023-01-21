@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     height: 70px;
-    gap: 40px;
+    gap: 20px;
     box-shadow: 0 0 7px 0.5px rgb(218, 218, 218);
 }
 .logo{
@@ -102,4 +102,47 @@
 .my-cart{
     width: 120px;
     height: 45px;
+}
+.polygon-img{
+    width: 20px;
+}
+.upcoming-container{
+    display: flex;
+    justify-content: center;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.center{
+    justify-content: center;
+    align-items: center;
+}
+.noti{
+    margin-top: 10px;
+    width: calc(100% - 60px);
+    height: 80px;
+    gap: 20px;
+    align-items: center;
+    justify-self: center;
+    box-shadow: 0 0 2px 0.5px rgb(218, 218, 218);
+}
+.noti > div:not(.sep){
+    padding: 40px;
+}
+.sep{
+    height: 40px;
+    width: 1.5px;
+    background-color: rgb(209, 209, 209);
+}
+.c-name-con{
+    gap: 20px;
+    /* flex: 1; */
+}
+.reminder-container{
+    gap: 30px;
 }
