@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css">
     <script src="./script/script.js"></script>
+    <script src="./script/flickity.pkgd.min.js"></script>
 </head>
 <body>
     <section class="navbar">
@@ -38,18 +39,18 @@
             </div>
             <div class="my-cart button-blue">
                 <img src="./assets/cart-vector.png" style="width: 20px; height: 20px; margin-right: 10px;">
-                <span>My Cart</span>
+                <span>Wishlist</span>
             </div>
         </div>
         <div class="upcoming-container">
             <div class="noti flex-row">
                 <div class="noti-head-text">
-                    <span>Upcoming Celebration</span>
+                    <span style="font-size: 22px; font-weight: 600; color: #0247D5;">Upcoming Celebration</span>
                 </div>
                 <div class="sep"></div>
                 <div class="remaining-days flex-col center">
-                    <span>Remaining Days</span>
-                    <span>6 days</span>
+                    <span style="font-weight: 500;">Remaining Days</span>
+                    <span style="font-size: 22px; font-weight: 600; color: #0247D5">6 days</span>
                 </div>
                 <div class="sep"></div>
                 <div class="c-name-con flex-row center">
@@ -79,6 +80,25 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="carousel">
+        <div class="gallery js-flickity"
+        data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+            <div class="gallery-cell">
+                <img src="./assets/Rectangle 67.png" style="width: 1120px; border-radius: 11px;">
+            </div>
+            <div class="gallery-cell">
+                <img src="./assets/Rectangle 67.png" style="width: 1120px;">
+            </div>
+            <div class="gallery-cell is-selected">
+                <img src="./assets/Rectangle 67.png" style="width: 1120px;">
+            </div>
+            <div class="gallery-cell is-selected">
+                <img src="./assets/Rectangle 67.png" style="width: 1120px;">
+            </div>
+            <!-- <div class="gallery-cell"></div>
+            <div class="gallery-cell"></div> -->
         </div>
     </section>
 </body>
