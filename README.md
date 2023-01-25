@@ -1,3 +1,3 @@
 # ebo-frontend
 
-## Link - https://devamanin.github.io/ebo-frontend/
+## Link - https://extraordinary-taiyaki-45b4f7.netlify.app/
