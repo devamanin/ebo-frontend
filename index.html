@@ -37,9 +37,13 @@
                     <img class="polygon-img" src="./assets/polygon.png" alt="polygon">
                 </div>
             </div>
-            <div class="my-cart button-blue">
-                <img src="./assets/cart-vector.png" style="width: 20px; height: 20px; margin-right: 10px;">
-                <span>Wishlist</span>
+            <div class="saved">
+                <img src="./assets/🦆 icon _heart circle outline_.png" style="width: 20px; height: 20px; margin-right: 10px;">
+                <span>Saved</span>
+            </div>
+            <div class="my-cart">
+                <img src="./assets/Vector (2).png" style="width: 20px; height: 20px; margin-right: 10px;">
+                <span>Cart</span>
             </div>
         </div>
         <div class="upcoming-container">
@@ -61,7 +65,7 @@
                     </div>
                 </div>
                 <div class="sep"></div>
-                <div class="reminder-container flex-row center">
+                <div class="reminder-container flex-row center relative">
                     <div class="rem flex-col center">
                         <img src="./assets/Ellipse 3.png" alt="reminder image" style="width: 54px; height: 54px;">
                         <span>Sarafa</span>
@@ -74,16 +78,16 @@
                         <img src="./assets/Ellipse 3.png" alt="reminder image" style="width: 54px; height: 54px;">
                         <span>Sarafa</span>
                     </div>
-                    <div class="rem flex-col center">
-                        <img src="./assets/Ellipse 3.png" alt="reminder image" style="width: 54px; height: 54px;">
-                        <span>Create</span>
+                    <div class="rem flex-col create-event absolute center">
+                        <img src="./assets/🦆 icon _person add outline_.png" alt="reminder image" style="width: 30px;">
+                        <!-- <span>Create</span> -->
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section class="carousel">
-        <div class="gallery js-flickity"
+        <div class="gallery car js-flickity"
         data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
             <div class="gallery-cell">
                 <img src="./assets/Rectangle 67.png" style="width: 1120px; border-radius: 11px;">
@@ -100,6 +104,139 @@
             <!-- <div class="gallery-cell"></div>
             <div class="gallery-cell"></div> -->
         </div>
+    </section>
+    <section class="categories">
+        <div class="cat-main-container flex-row">
+            <div class="cat-text-container">
+                <span style="font-size: 19px; font-weight: 600;">Categories</span>
+            </div>
+            <div class="cat-container flex-row">
+                <div class="cat-item flex-col center">
+                    <img src="./assets/Ellipse 47 (1).png" style="width: 100px; height: 100px;">
+                    <span>Birthday</span>
+                </div>
+                <div class="cat-item flex-col center">
+                    <img src="./assets/Ellipse 47 (1).png" style="width: 100px; height: 100px;">
+                    <span>Birthday</span>
+                </div>
+                <div class="cat-item flex-col center">
+                    <img src="./assets/Ellipse 47 (1).png" style="width: 100px; height: 100px;">
+                    <span>Birthday</span>
+                </div>
+                <div class="cat-item flex-col center">
+                    <img src="./assets/Ellipse 47 (1).png" style="width: 100px; height: 100px;">
+                    <span>Birthday</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="recently-viewed" style="padding: 20px;">
+        <span style="display: block; font-size: 20px; font-weight: 600; margin-bottom: 20px; margin-top: 20px;">Recently Viewed</span>
+        <div class="gallery recent js-flickity"
+        data-flickity-options='{ "freeScroll": true, "wrapAround": false, "draggable":true, "pageDots":false, "contain":true }'>
+            <div class="gallery-cell">
+                <div class="r-view-item flex-row" style="width: 400px">
+                    <img src="./assets/recently-viewed.png">
+                    <div class="desc flex-col" style="margin-top: 10px;">
+                        <span>DUDALINA Men Long Sleeve Shirt</span>
+                        <span style="font-size: 0.9rem; margin-top: 2px;">Men Casual Men Shirt</span>
+                        <div class="date-offer flex-row" style="margin-top: 7px; justify-content: center; align-items: center;">
+                            <span>27th Jan</span>
+                            <span style="color: #00A087; margin-left: 40px;">3 offers <span style="font-size: 20px; margin-left: 10px;">></span></span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <div class="r-view-item flex-row" style="width: 400px">
+                    <img src="./assets/recently-viewed.png">
+                    <div class="desc flex-col" style="margin-top: 10px;">
+                        <span>DUDALINA Men Long Sleeve Shirt</span>
+                        <span style="font-size: 0.9rem; margin-top: 2px;">Men Casual Men Shirt</span>
+                        <div class="date-offer flex-row" style="margin-top: 7px; justify-content: center; align-items: center;">
+                            <span>27th Jan</span>
+                            <span style="color: #00A087; margin-left: 40px;">3 offers <span style="font-size: 20px; margin-left: 10px;">></span></span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <div class="r-view-item flex-row" style="width: 400px">
+                    <img src="./assets/recently-viewed.png">
+                    <div class="desc flex-col" style="margin-top: 10px;">
+                        <span>DUDALINA Men Long Sleeve Shirt</span>
+                        <span style="font-size: 0.9rem; margin-top: 2px;">Men Casual Men Shirt</span>
+                        <div class="date-offer flex-row" style="margin-top: 7px; justify-content: center; align-items: center;">
+                            <span>27th Jan</span>
+                            <span style="color: #00A087; margin-left: 40px;">3 offers <span style="font-size: 20px; margin-left: 10px;">></span></span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell">
+                <div class="r-view-item flex-row" style="width: 400px">
+                    <img src="./assets/recently-viewed.png">
+                    <div class="desc flex-col" style="margin-top: 10px;">
+                        <span>DUDALINA Men Long Sleeve Shirt</span>
+                        <span style="font-size: 0.9rem; margin-top: 2px;">Men Casual Men Shirt</span>
+                        <div class="date-offer flex-row" style="margin-top: 7px; justify-content: center; align-items: center;">
+                            <span>27th Jan</span>
+                            <span style="color: #00A087; margin-left: 40px;">3 offers <span style="font-size: 20px; margin-left: 10px;">></span></span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="decor-place flex-row center" style="margin-top: 30px;">
+        <div class="container flex-row" style="width: calc(97%); height: 420px; align-items: center; box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.11);">
+            <div class="flex-col" style="height: 100%; justify-content: center; padding: 30px; width: 360px;">
+                <span style="font-size: 30px; font-weight: 600;">Now celebrate</span>
+                <span style="font-size: 30px; font-weight: 600;">your events</span>
+                <span style="color: #0049D3; font-size: 20px; font-weight: 600; margin-top: 30px;">Select between</span>
+            </div>
+            <div class="flex-row" style="width: 100%; padding: 20px; justify-content: space-between;">
+                <div style="position: relative;">
+                    <img src="./assets/at-your-home.png" alt="At your home" style="width: 520px;">
+                    <div class="flex-col" style="position: absolute; width: 100%; height: 120px; bottom: 0; color: white; justify-content: center; align-items: center; ">
+                        <span style="font-size: 32px; font-weight: 600; text-shadow: 2px 2px 8px rgb(255, 204, 0);">AT YOUR HOME STORY</span>
+                    </div>
+                </div>
+                <div style="position: relative;">
+                    <img src="./assets/at-your-home.png" alt="At your home" style="width: 520px;">
+                    <div class="flex-col" style="position: absolute; width: 100%; height: 120px; bottom: 0; color: white; justify-content: center; align-items: center;">
+                        <span style="font-size: 32px; font-weight: 600; text-shadow: 2px 2px 8px rgb(255, 204, 0);">LET'S STEP OUT!</span>
+                        <span style="font-size: 32px; font-weight: 600; text-shadow: 2px 2px 8px rgb(255, 204, 0);">DECORS FOR OUTDOORS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sugeested flex-col" style="padding: 20px;">
+        <span style="font-size: 20px; font-weight: 600; margin-top: 20px;">Suggested For You</span>
+    </section>
+    <section class="spare">
+        <div style="height: 120px; width: 100%;"></div>
     </section>
 </body>
 </html>

@@ -9,7 +9,7 @@
     box-sizing: border-box;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
 }
 .navbar-container{
     display: flex;
@@ -104,9 +104,17 @@ body{
     margin-top: 1px;
     height: 40px;
 }
-.my-cart{
+.saved{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 120px;
     height: 45px;
+}
+.my-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .polygon-img{
     width: 20px;
@@ -149,14 +157,31 @@ body{
     /* flex: 1; */
 }
 .reminder-container{
-    gap: 30px;
+    gap: 10px;
+    /* width: ; */
+    width: 400px;
+    /* background-color: green; */
+}
+.create-event{
+    right: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
 }
 
 .gallery {
     /* background: #EEE; */
   }
   
-  .gallery-cell {
+  .car .gallery-cell {
     /* width: 66%; */
     width: 1120px;
     /* border-radius: 50px; */
@@ -177,7 +202,7 @@ body{
   .carousel{
     position: relative;
   }
-  .previous{
+  .car > .previous{
     position: absolute;
     background-color: white;
     width: 35px;
@@ -186,7 +211,8 @@ body{
     left: 20px;
     border-radius: 50%;
     padding: 10px;
-  }  .next{
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.16);
+  } .car > .next{
     position: absolute;
     background-color: white;
     width: 35px;
@@ -195,6 +221,7 @@ body{
     right: 20px;
     border-radius: 50%;
     padding: 10px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.16);
   }
 .flickity-page-dots{
     display: flex;
@@ -215,8 +242,86 @@ body{
     border-radius: 10px;
     transition: all 0.3s;
 }
+.cat-main-container{
+    /* background-color: red; */
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.cat-container{
+    /* justify-content: center; */
+    width: 100%;
+    gap: 40px;
+    justify-content: space-between;
+    /* background-color: red; */
+    /* padding: 20p; */
+}
+.cat-item:first-child{
+    margin-left: 40px;
+}
+.cat-item:last-child{
+    margin-right: 100px;
+}
+.cat-item span{
+    margin-top: 20px;
+}
+.recent{
+    /* background-color: red; */
+    height: 130px;
+    position: relative;
 
-  
+}
+.recent .gallery-cell {
+    /* width: 66%; */
+    /* width: ; */
+    /* border-radius: 50px; */
+    /* height: 200px; */
+    margin-right: 20px;
+    /* height: 320px */
+    counter-increment: gallery-cell;
+    /* scroll-snap-type: mandatory; */
+  }
+.recent > .gallery-cell{
+    height: 340px;
+    width: 120px;
+    /* background-color: green; */
+}
+.r-view-item{
+    /* background-color: green; */
+    width: 320px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+}
+.r-view-item img{
+    width: 132px;
+    padding: 5px;
+}
+.flickity-viewport{
+    height: 320px;
+}
+/* .recent > .previous{
+    position: absolute;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    top: calc(55% - 55px);
+    right: 20px;
+    border-radius: 50%;
+    padding: 10px;
+    display: block;
+  } */
+.recent > .next{
+    position: absolute;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    top: calc(55% - 20px);
+    right: 10px;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.16);
+  }
   /* cell number */
   /* .gallery-cell:before {
     display: block;
