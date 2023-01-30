@@ -5,10 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css">
-    <script src="./script/script.js"></script>
     <script src="./script/flickity.pkgd.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 </head>
 <body>
+    <div class="blur" style="width: 100%; height: 100%; position: absolute; opacity: 0.5; background-color: black; z-index: 9; display: none;">
+    </div>
+    <!-- <div class="login-container flex-col center" style="width: 100%; height: 100%; position: absolute; z-index: 10;">
+        <div class="login-box flex-col" style="width: 320px; max-height: 420px; background-color: white; border-radius: 11px; overflow: hidden; box-shadow: 0 0 116px 4px rgba(0, 0, 0, 0.22);">
+            <div class="header flex-row" style="background-color: #0048CD; height: 60px; align-items: center;">
+                <img src="./assets/logo.png" width="77px" height="45px" >
+                <span style="margin-left: auto; margin-right: 20px; font-size: 30; color: white;">X</span>
+            </div>
+            <div class="login-or-signup-text flex-col " style="padding-left: 20px; padding-top: 10px;">
+                <span style="font-size: 22px; font-weight: 600;">Quick Login</span>
+                <span>or <span style="color: #0048CD;">Create and account<span></span>
+            </div>
+            <div class="phone-number-container flex-col" style="background-color: rgba(0, 0, 0, 0); margin-top: 10px; margin-left: 20px; margin-right: 20px; margin-bottom: 20px; border: solid 1px black; border-radius: 4px; height: 60px; padding: 8px;">
+                <span style="font-size: 18px; font-weight: 500; color: #565050;">Phone Number</span>
+                <input type="number" name="phone-number" id="phone-number" style="width: 100%; height: 40px; font-size: 18px; margin-top: 5px;">
+            </div>
+            <div class="otp-container flex-col" style="background-color: rgba(0, 0, 0, 0); margin-left: 20px; margin-bottom: 20px; border: solid 1px black; border-radius: 4px; height: 60px; padding: 8px; margin-right: 20px;">
+            <div class="otp-container flex-col" style="background-color: rgba(0, 0, 0, 0);">
+                <span>One Time Password</span>
+                <input type="number" name="otp" id="otp">
+            </div>
+            <div class="send-otp button-blue" style="margin-left: 20px; margin-right: 20px; height: 40px; border-radius: 6px;">
+                <button class="sent-otp-but" style="width: 100%; height: 100%; border-radius: 6px; font-size: 16px; font-weight: 600; color: white; background-color: #0646CB;">SEND OTP</button>
+            </div>
+            <div style="padding: 20px;">
+                <span>By clicking continue, you agree with our <span>Privacy Policy</span></span>
+            </div>
+        </div>
+    </div> -->
     <section class="navbar">
         <div class="navbar-container">
             <div class="logo">
@@ -31,10 +60,44 @@
                     </div>
                 </div>
             </div>
-            <div class="user-p-button">
-                <div class="user-p-cont">
+            <div class="user-p-button" style="position: relative; width: 76px;">
+                <div class="user-p-cont flex-row center" style="position: absolute; margin-top: -10px;">
                     <span>Krishna</span>
                     <img class="polygon-img" src="./assets/polygon.png" alt="polygon">
+                </div>
+                <div class="usr-profile-popup" style="position: absolute; padding: 28px;">
+                    <!-- <div class="pr-login flex-row center">
+                        <button class="login-but" style="width: 80%; height: 40px; border-radius: 22px; background-color: #0048CD; color: white; font-size: 16px;">Login</button>
+                    </div> -->
+                    <div class="name flex-row" style="align-items: center;">
+                        <iconify-icon icon="pajamas:profile" style="color: #0446D4" width="24px"></iconify-icon>
+                        <div style="margin-left: 10px;">
+                            <span>Hello, Krishna</span>
+                            <span>843928004</span>
+                        </div>
+                    </div>
+                    <div class="pr-saved-address flex-row" style="align-items: center;">
+                        <iconify-icon icon="ic:round-location-on" style="color: #0446D4;" width="24px"></iconify-icon>
+                        <span style="margin-left: 10px;">Saved Address</span>
+                    </div>
+                    <div class="pr-my-order flex-row" style="align-items: center">
+                        <iconify-icon icon="teenyicons:basket-outline" style="color: #0446D4;" width="24px"></iconify-icon>
+                        <span style="margin-left: 10px;">My Order</span>
+                    </div>
+                    <div class="pr-wishlist flex-row" style="align-items: center;">
+                        <iconify-icon icon="mdi:cards-heart-outline" style="color: #0446D4;" width="24px"></iconify-icon>
+                        <span style="margin-left: 10px;">Wishlist</span>
+                    </div>
+                    <div class="pr-refer flex-row" style="align-items: center;">
+                        <iconify-icon icon="mdi:gift" style="color: #0446D4;" width="24px"></iconify-icon>
+                        <span style="margin-left: 10px;">Refer a friend</span>
+                    </div>
+                    <div class="pr-help">
+                        <span>Need Help</span>
+                    </div>
+                    <div class="pr-logout flex-row center" style="margin-top: 5px;">
+                        <span style="font-weight: 600; font-size: 18px;">Logout</span>
+                    </div>
                 </div>
             </div>
             <div class="saved">
@@ -234,9 +297,102 @@
     </section>
     <section class="sugeested flex-col" style="padding: 20px;">
         <span style="font-size: 20px; font-weight: 600; margin-top: 20px;">Suggested For You</span>
+        <div class="tab" style="margin-top: 20px;">
+            <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'Birthday')" style="padding: 5px;">Birthday</button>
+            <button class="tablinks" onclick="openCity(event, 'Paris')" style="padding: 5px;">Anniversary</button>
+            <button class="tablinks" onclick="openCity(event, 'Tokyo')" style="padding: 5px;">Baby Shower</button>
+        </div>
+        <div id="Birthday" class="tabcontent">
+            <div class="gallery car js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": false, "draggable":true, "pageDots":false, "contain":true }'>
+                <div class="gallery-cell" style="width: 310px !important;">
+                    <div class="flex-col center" style="border-radius: 4px; box-shadow: 0 0 1px 1px rgba(0, 0, 0,0.11); padding-left: 5px; padding-top: 2.5px; padding-right: 5px; width: 305px; height: auto;">
+                        <img src="./assets/suggestions.png" width="300px" height="274px" style="border-radius: 0px;">
+                        <div class="flex-col sugg-title" style="margin-top: 10px; width: 100%;">
+                            <span>DUDALINA Men Long Sleeve Shirt</span>
+                            <span>Men Casual Men Shirt</span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px; width: 100%; padding-left: 30px; padding-right: 30px; margin-bottom: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-cell" style="width: 310px !important">
+                    <div class="flex-col center" style="border-radius: 4px; box-shadow: 0 0 1px 1px rgba(0, 0, 0,0.11); padding-left: 5px; padding-top: 2.5px; padding-right: 5px; width: 305px; height: auto;">
+                        <img src="./assets/suggestions.png" width="300px" height="274px" style="border-radius: 0px;">
+                        <div class="flex-col sugg-title" style="margin-top: 10px; width: 100%;">
+                            <span>DUDALINA Men Long Sleeve Shirt</span>
+                            <span>Men Casual Men Shirt</span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px; width: 100%; padding-left: 30px; padding-right: 30px; margin-bottom: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-cell" style="width: 310px !important">
+                    <div class="flex-col center" style="border-radius: 4px; box-shadow: 0 0 1px 1px rgba(0, 0, 0,0.11); padding-left: 5px; padding-top: 2.5px; padding-right: 5px; width: 305px; height: auto;">
+                        <img src="./assets/suggestions.png" width="300px" height="274px" style="border-radius: 0px;">
+                        <div class="flex-col sugg-title" style="margin-top: 10px; width: 100%;">
+                            <span>DUDALINA Men Long Sleeve Shirt</span>
+                            <span>Men Casual Men Shirt</span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px; width: 100%; padding-left: 30px; padding-right: 30px; margin-bottom: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-cell" style="width: 310px !important">
+                    <div class="flex-col center" style="border-radius: 4px; box-shadow: 0 0 1px 1px rgba(0, 0, 0,0.11); padding-left: 5px; padding-top: 2.5px; padding-right: 5px; width: 305px; height: auto;">
+                        <img src="./assets/suggestions.png" width="300px" height="274px" style="border-radius: 0px;">
+                        <div class="flex-col sugg-title" style="margin-top: 10px; width: 100%;">
+                            <span>DUDALINA Men Long Sleeve Shirt</span>
+                            <span>Men Casual Men Shirt</span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px; width: 100%; padding-left: 30px; padding-right: 30px; margin-bottom: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-cell" style="width: 310px !important">
+                    <div class="flex-col center" style="border-radius: 4px; box-shadow: 0 0 1px 1px rgba(0, 0, 0,0.11); padding-left: 5px; padding-top: 2.5px; padding-right: 5px; width: 305px; height: auto;">
+                        <img src="./assets/suggestions.png" width="300px" height="274px" style="border-radius: 0px;">
+                        <div class="flex-col sugg-title" style="margin-top: 10px; width: 100%;">
+                            <span>DUDALINA Men Long Sleeve Shirt</span>
+                            <span>Men Casual Men Shirt</span>
+                        </div>
+                        <div class="price flex-row" style="justify-content: space-between; align-items: center; margin-top: 10px; width: 100%; padding-left: 30px; padding-right: 30px; margin-bottom: 10px;">
+                            <span style="font-weight: 600; font-size: 20px;">&#8377; 25465</span>
+                            <span style="color: grey;"><s>&#8377; 25478</s></span>
+                            <span style="color: #00A087; font-size: 20px; font-weight: 600;">50%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>    
+        <!-- <h3>London</h3>
+            <p>London is the capital city of England.</p> -->
+        </div>
+        <div id="Paris" class="tabcontent">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti aliquam ut voluptates similique vero sapiente, cum non omnis beatae corrupti dignissimos blanditiis quia laborum! Modi repellendus similique eaque iure maiores?</p>
+        </div>
+        <div id="Tokyo" class="tabcontent">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, voluptatum. Tenetur ratione nostrum veniam, sunt commodi eaque laudantium unde error illo, doloribus, non aut. Exercitationem in vitae laborum libero facilis.
+            </p>
+        </div>
     </section>
     <section class="spare">
         <div style="height: 120px; width: 100%;"></div>
     </section>
+    <script src="./script/firebaseconfig.js" type="module"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
